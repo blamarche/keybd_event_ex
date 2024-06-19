@@ -1,4 +1,4 @@
-package keybd_event_test
+package keybd_event_ex_test
 
 import (
 	"runtime"
@@ -8,7 +8,7 @@ import (
 )
 
 func ExampleNewKeyBonding() {
-	kb, err := keybd_event.NewKeyBonding()
+	kb, err := keybd_event_ex.NewKeyBonding()
 	if err != nil {
 		panic(err)
 	}
@@ -19,7 +19,7 @@ func ExampleNewKeyBonding() {
 	}
 
 	// Select keys to be pressed
-	kb.SetKeys(keybd_event.VK_A, keybd_event.VK_B)
+	kb.SetKeys(keybd_event_ex.VK_A, keybd_event_ex.VK_B)
 
 	// Set shift to be pressed
 	kb.HasSHIFT(true)

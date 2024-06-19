@@ -1,5 +1,5 @@
-// Package keybd_event is used for a key press simulated in Windows, Linux and Mac
-package keybd_event
+// Package keybd_event_ex is used for a key press simulated in Windows, Linux and Mac
+package keybd_event_ex
 
 //KeyBonding type for keybd_event
 type KeyBonding struct {

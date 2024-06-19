@@ -1,13 +1,10 @@
-# keybd_event
+# keybd_event_ex
 
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/micmonay/keybd_event)
-
-This library simulates the key press on a keyboard. It runs on Linux, Windows and Mac.
+This library simulates the key press on a keyboard. It runs on Linux, Windows and Mac. It is a personal fork of the library made here: https://github.com/micmonay/keybd_event
+Primarily it extends the linux implementation to include key values for mouse button left/right/etc.
 
 **Important :** 
 - The keys change in the different keyboard layouts of the target computer(s).
-- I have tested this code on my system and I don't find any errors. If you have a bug, please create an issue.
-
 
 ### Example :
 ```go
@@ -16,11 +13,11 @@ package main
 import (
 	"runtime"
 	"time"
-	"github.com/micmonay/keybd_event"
+	"github.com/blamarche/keybd_event_ex"
 )
 
 func main() {
-	kb, err := keybd_event.NewKeyBonding()
+	kb, err := keybd_event_ex.NewKeyBonding()
 	if err != nil {
 		panic(err)
 	}
@@ -31,7 +28,7 @@ func main() {
 	}
 	
 	// Select keys to be pressed
-	kb.SetKeys(keybd_event.VK_A, keybd_event.VK_B) 
+	kb.SetKeys(keybd_event_ex.VK_A, keybd_event_ex.VK_B) 
 
 	// Set shift to be pressed
 	kb.HasSHIFT(true) 

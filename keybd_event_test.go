@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/micmonay/keybd_event"
+	"github.com/blamarche/keybd_event_ex"
 )
 
 func ExampleNewKeyBonding() {
